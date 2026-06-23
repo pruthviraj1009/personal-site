@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects — Pruthviraj Desai</title>
+<meta name="description" content="Projects by Pruthviraj Desai — self-hosted infrastructure, AI tools, and side experiments." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <main class="wrap">
+
+    <nav class="sitenav reveal">
+      <a href="/" class="logo">Pruthviraj Desai</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects.html" class="active">Projects</a>
+        <a href="/blog.html">Blog</a>
+      </div>
+    </nav>
+
+    <div class="breadcrumb reveal">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Projects</span>
+    </div>
+
+    <div class="page-hero">
+      <h1 class="reveal delay-1">Projects</h1>
+      <p class="sub reveal delay-2">Things I'm building and maintaining.</p>
+    </div>
+
+    <div class="project-card reveal delay-1">
+      <div class="project-name">Personal Homelab</div>
+      <div class="project-desc">
+        A self-managed cloud server running Vaultwarden for password management, Caddy as a
+        reverse proxy with automatic HTTPS, and n8n for workflow automation. Everything I
+        need, hosted on hardware I control.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">Linux</span>
+        <span class="project-tag">Caddy</span>
+        <span class="project-tag">Docker</span>
+        <span class="project-tag">Vaultwarden</span>
+        <span class="project-tag">n8n</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal delay-2">
+      <div class="project-name">This Site</div>
+      <div class="project-desc">
+        A hand-written static site with no frameworks, no build tools, and no external
+        dependencies. Pure HTML, CSS, and a few lines of vanilla JS. Served by Caddy with
+        automatic TLS from Let's Encrypt.
+      </div>
+      <div class="project-tags">
+        <span class="project-tag">HTML</span>
+        <span class="project-tag">CSS</span>
+        <span class="project-tag">Caddy</span>
+        <span class="project-tag">Self-hosted</span>
+      </div>
+    </div>
+
+    <footer class="reveal">
+      Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
+      No trackers, no third parties, no cookies.
+    </footer>
+
+  </main>
+
+  <script>
+    var prog = document.getElementById('progress');
+    function updateProgress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = max > 0 ? (window.scrollY / max * 100) + '%' : '0%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+
+    document.querySelectorAll('.project-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  </script>
+</body>
+</html>
