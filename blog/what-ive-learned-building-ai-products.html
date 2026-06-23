@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What I've learned building AI products at a startup — Pruthviraj Desai</title>
+<meta name="description" content="Twelve months in as an APM at an AI-native company — the parts nobody talks about, and what actually matters when shipping LLM features." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <main class="wrap">
+
+    <nav class="sitenav reveal">
+      <a href="/" class="logo">Pruthviraj Desai</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/blog.html" class="active">Blog</a>
+      </div>
+    </nav>
+
+    <div class="breadcrumb reveal">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span class="current">What I've learned building AI products</span>
+    </div>
+
+    <article>
+      <header class="article-header reveal">
+        <div class="article-meta">
+          <span>May 2026</span>
+          <span class="sep">·</span>
+          <span>4 min read</span>
+          <span class="sep">·</span>
+          <span class="post-tag">AI</span>
+          <span class="post-tag">Product</span>
+        </div>
+        <h1>What I've learned building AI products at a startup</h1>
+      </header>
+
+      <div class="article-body reveal">
+        <p>
+          I've been an APM at Dashverse for about a year and a half. We build AI-powered
+          analytics for short-form video creators. In that time I've shipped features that
+          worked, features that flopped, and a few that taught me something I couldn't have
+          read in a blog post. Here's what stuck.
+        </p>
+
+        <h2>The model is not the product</h2>
+        <p>
+          Every PM at an AI company learns this eventually. The model is a capability —
+          what you build around it is the product. The UX, the defaults, the way you
+          surface uncertainty, when you show results and when you hold them back. That's
+          all product work, and it's where most AI features succeed or fail.
+        </p>
+        <p>
+          We spent weeks tuning prompts on a feature that users found confusing not because
+          the output was wrong, but because we showed it in the wrong place at the wrong
+          moment. The model wasn't the problem. The product was.
+        </p>
+
+        <h2>Latency is a feature</h2>
+        <p>
+          Not just a metric. When something takes 8 seconds to load, users don't sit
+          patiently — they assume it's broken. We added a skeleton loader with a progress
+          message and our perceived quality score went up even though nothing about the
+          model changed. What you show while the AI is thinking matters as much as what
+          it eventually says.
+        </p>
+
+        <h2>Prompt engineering is product design</h2>
+        <p>
+          The prompt is the spec. When you write one, you're making decisions about tone,
+          format, scope, edge cases — the same decisions you'd make when writing a PRD.
+          The difference is that the prompt is also the implementation. There's no handoff
+          to an engineer. That compresses the feedback loop dramatically and rewards people
+          who can think at both levels simultaneously.
+        </p>
+
+        <h2>Users don't know what AI can't do</h2>
+        <p>
+          They've seen the demos. They've used ChatGPT. They assume your AI feature can
+          do everything theirs can. When it can't — when it hallucinates, misreads context,
+          or just refuses — the trust drop is sharp.
+        </p>
+        <p>
+          The fix is explicit constraint-setting before the interaction, not apology after.
+          Tell users what this feature does and doesn't do, upfront, in plain language.
+          Set the box clearly and they'll work within it. Leave it open and they'll walk
+          into walls.
+        </p>
+
+        <h2>Evaluation is the hardest unsolved problem</h2>
+        <p>
+          How do you know if your AI feature got better? Not in the lab — in production,
+          for real users, on real inputs you've never seen. We're still figuring this out.
+          The teams I've seen do this well treat eval like a product in itself: they build
+          it deliberately, instrument it early, and revisit it whenever something breaks
+          in unexpected ways.
+        </p>
+
+        <h2>What I'm still figuring out</h2>
+        <p>
+          How to communicate AI product changes to users without eroding trust. How to
+          write roadmaps when the capabilities of your core dependency are changing every
+          few months. How to decide when a feature is "good enough" when the ceiling keeps
+          moving. These are genuinely hard, and I don't think the playbook exists yet.
+          That's what makes this moment interesting.
+        </p>
+
+        <a href="/blog.html" class="back-link reveal">← Back to Writing</a>
+      </div>
+    </article>
+
+    <footer class="reveal">
+      Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
+      No trackers, no third parties, no cookies.
+    </footer>
+
+  </main>
+
+  <script>
+    var prog = document.getElementById('progress');
+    function updateProgress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = max > 0 ? (window.scrollY / max * 100) + '%' : '0%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+  </script>
+</body>
+</html>
