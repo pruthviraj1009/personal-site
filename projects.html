@@ -6,6 +6,17 @@
 <title>Projects — Pruthviraj Desai</title>
 <meta name="description" content="Projects by Pruthviraj Desai — self-hosted infrastructure, AI tools, and side experiments." />
 <meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://pruthvirajdesai.qzz.io/projects.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Projects — Pruthviraj Desai" />
+<meta property="og:description" content="Projects by Pruthviraj Desai — self-hosted infrastructure, AI tools, and side experiments." />
+<meta property="og:url" content="https://pruthvirajdesai.qzz.io/projects.html" />
+<meta property="og:site_name" content="Pruthviraj Desai" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Projects — Pruthviraj Desai" />
+<meta name="twitter:description" content="Projects by Pruthviraj Desai — self-hosted infrastructure, AI tools, and side experiments." />
+
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -73,28 +84,6 @@
 
   </main>
 
-  <script>
-    var prog = document.getElementById('progress');
-    function updateProgress() {
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      prog.style.width = max > 0 ? (window.scrollY / max * 100) + '%' : '0%';
-    }
-    window.addEventListener('scroll', updateProgress, { passive: true });
-
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
-
-    document.querySelectorAll('.project-card').forEach(function(card) {
-      card.addEventListener('mousemove', function(e) {
-        var r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    });
-  </script>
+  <script src="/script.js"></script>
 </body>
 </html>

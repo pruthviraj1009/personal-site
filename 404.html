@@ -4,7 +4,18 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>404 — Pruthviraj Desai</title>
+<meta name="description" content="Page not found." />
+<meta name="robots" content="noindex" />
 <meta name="color-scheme" content="dark" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="404 — Pruthviraj Desai" />
+<meta property="og:description" content="Page not found." />
+<meta property="og:site_name" content="Pruthviraj Desai" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="404 — Pruthviraj Desai" />
+<meta name="twitter:description" content="Page not found." />
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="stylesheet" href="/style.css" />
 </head>
@@ -88,16 +99,9 @@
     .error-msg { color: var(--ink-soft); font-size: 16px; margin: 0; }
   </style>
 
+  <script src="/script.js"></script>
   <script>
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
-
-    var path = window.location.pathname;
-    document.getElementById('error-path').textContent = path;
+    document.getElementById('error-path').textContent = window.location.pathname;
   </script>
 </body>
 </html>

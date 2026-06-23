@@ -6,6 +6,17 @@
 <title>Blog — Pruthviraj Desai</title>
 <meta name="description" content="Writing by Pruthviraj Desai on AI, product, and self-hosting." />
 <meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://pruthvirajdesai.qzz.io/blog.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog — Pruthviraj Desai" />
+<meta property="og:description" content="Writing by Pruthviraj Desai on AI, product, and self-hosting." />
+<meta property="og:url" content="https://pruthvirajdesai.qzz.io/blog.html" />
+<meta property="og:site_name" content="Pruthviraj Desai" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Blog — Pruthviraj Desai" />
+<meta name="twitter:description" content="Writing by Pruthviraj Desai on AI, product, and self-hosting." />
+
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="stylesheet" href="style.css" />
 </head>
@@ -72,28 +83,6 @@
 
   </main>
 
-  <script>
-    var prog = document.getElementById('progress');
-    function updateProgress() {
-      var max = document.documentElement.scrollHeight - window.innerHeight;
-      prog.style.width = max > 0 ? (window.scrollY / max * 100) + '%' : '0%';
-    }
-    window.addEventListener('scroll', updateProgress, { passive: true });
-
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
-
-    document.querySelectorAll('.post-item').forEach(function(card) {
-      card.addEventListener('mousemove', function(e) {
-        var r = card.getBoundingClientRect();
-        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
-        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
-      });
-    });
-  </script>
+  <script src="/script.js"></script>
 </body>
 </html>
