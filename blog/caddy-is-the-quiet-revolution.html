@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Caddy is the quiet revolution in web servers — Pruthviraj Desai</title>
+<meta name="description" content="I switched from Nginx and never looked back. Automatic HTTPS, a readable config format, and zero manual cert renewal." />
+<meta name="color-scheme" content="dark" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <main class="wrap">
+
+    <nav class="sitenav reveal">
+      <a href="/" class="logo">Pruthviraj Desai</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/blog.html" class="active">Blog</a>
+      </div>
+    </nav>
+
+    <div class="breadcrumb reveal">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span class="current">Caddy is the quiet revolution in web servers</span>
+    </div>
+
+    <article>
+      <header class="article-header reveal">
+        <div class="article-meta">
+          <span>Apr 2026</span>
+          <span class="sep">·</span>
+          <span>3 min read</span>
+          <span class="sep">·</span>
+          <span class="post-tag">Infra</span>
+          <span class="post-tag">Self-hosting</span>
+        </div>
+        <h1>Caddy is the quiet revolution in web servers</h1>
+      </header>
+
+      <div class="article-body reveal">
+        <p>
+          Nginx is everywhere. It's the default answer, the thing in every tutorial,
+          the server that powers a huge portion of the web. I used it for years.
+          Then I tried Caddy and I'm not going back.
+        </p>
+
+        <h2>The config is readable by humans</h2>
+        <p>
+          Here's a full Nginx config to serve a static site with HTTPS, gzip, and
+          sensible headers. It's about 40 lines. Here's the same thing in a Caddyfile:
+        </p>
+        <pre><code>yourdomain.com {
+    root * /var/www/site
+    file_server
+    encode gzip
+}</code></pre>
+        <p>
+          That's it. Four lines. HTTPS is automatic. The certificate is issued and
+          renewed without you doing anything. Gzip is on. The site is served.
+        </p>
+        <p>
+          Nginx's config format made sense when it was designed. Today, for most
+          self-hosters, it's accidental complexity — you learn its syntax not because
+          it helps you understand your server, but because there's no way around it.
+          Caddyfile is the opposite: it reads like intent.
+        </p>
+
+        <h2>Automatic HTTPS is the headline feature</h2>
+        <p>
+          Caddy obtains TLS certificates from Let's Encrypt (or ZeroSSL) automatically,
+          the first time you serve a domain. It renews them automatically, well before
+          they expire. You never run <code>certbot renew</code>. You never wake up to a
+          "certificate expired" alert at 2am.
+        </p>
+        <p>
+          I know what you're thinking — this isn't magic, Certbot does the same thing.
+          True, but with Certbot you're still configuring two separate systems. With
+          Caddy there's one config file, one process, one thing to reason about.
+        </p>
+
+        <h2>Reverse proxying is trivial</h2>
+        <p>
+          I run several services behind Caddy — Vaultwarden, n8n, this site. Adding a
+          new one is one line:
+        </p>
+        <pre><code>service.yourdomain.com {
+    reverse_proxy localhost:3000
+}</code></pre>
+        <p>
+          HTTPS handled. Headers set. Done. With Nginx I'd have been copy-pasting a
+          server block, tweaking proxy headers, running certbot, reloading. Twenty
+          minutes of work versus thirty seconds.
+        </p>
+
+        <h2>When to still use Nginx</h2>
+        <p>
+          High-traffic production systems where you need fine-grained control over
+          worker processes, connection limits, and buffering behaviour. Large teams
+          where everyone already knows Nginx and the cognitive overhead of a new tool
+          isn't worth it. Environments where Nginx modules you depend on don't have
+          Caddy equivalents.
+        </p>
+        <p>
+          For personal projects, homelab use, or any scenario where you're the only
+          person touching the config? Caddy wins on every dimension that matters.
+        </p>
+
+        <h2>Try it this weekend</h2>
+        <p>
+          If you've got a VPS and a domain, you can replace your web server with Caddy
+          in an afternoon. The documentation is genuinely good. The community is active.
+          And once you've run it for a few months without thinking about certificates
+          or config reloads, you'll wonder what you were doing with Nginx.
+        </p>
+
+        <a href="/blog.html" class="back-link reveal">← Back to Writing</a>
+      </div>
+    </article>
+
+    <footer class="reveal">
+      Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
+      No trackers, no third parties, no cookies.
+    </footer>
+
+  </main>
+
+  <script>
+    var prog = document.getElementById('progress');
+    function updateProgress() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = max > 0 ? (window.scrollY / max * 100) + '%' : '0%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+    document.querySelectorAll('.reveal').forEach(function(el) { io.observe(el); });
+  </script>
+</body>
+</html>
