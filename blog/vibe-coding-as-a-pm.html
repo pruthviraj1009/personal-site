@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vibe coding as a PM: building this site with AI — Pruthviraj Desai</title>
+<meta name="description" content="I&#x27;m not a software engineer, but I built and run this site with an AI coding assistant. What that was like, what it&#x27;s good at, and what it means for product managers." />
+<meta name="author" content="Pruthviraj Desai" />
+<meta name="color-scheme" content="dark" />
+<link rel="canonical" href="https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Vibe coding as a PM: building this site with AI" />
+<meta property="og:description" content="I&#x27;m not a software engineer, but I built and run this site with an AI coding assistant. What that was like, what it&#x27;s good at, and what it means for product managers." />
+<meta property="og:url" content="https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html" />
+<meta property="og:site_name" content="Pruthviraj Desai" />
+<meta property="article:published_time" content="2026-07-01" />
+<meta property="article:author" content="Pruthviraj Desai" />
+<meta property="og:image" content="https://pruthvirajdesai.qzz.io/og/vibe-coding-as-a-pm.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Vibe coding as a PM: building this site with AI" />
+<meta name="twitter:description" content="I&#x27;m not a software engineer, but I built and run this site with an AI coding assistant. What that was like, what it&#x27;s good at, and what it means for product managers." />
+<meta name="twitter:image" content="https://pruthvirajdesai.qzz.io/og/vibe-coding-as-a-pm.png" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Pruthviraj Desai — Writing" href="/feed.xml" />
+<link rel="stylesheet" href="/style.css?v=2" />
+<script src="/script.js?v=2"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Vibe coding as a PM: building this site with AI",
+  "description": "I'm not a software engineer, but I built and run this site with an AI coding assistant. What that was like, what it's good at, and what it means for product managers.",
+  "datePublished": "2026-07-01",
+  "url": "https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html",
+  "mainEntityOfPage": "https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html",
+  "image": "https://pruthvirajdesai.qzz.io/og/vibe-coding-as-a-pm.png",
+  "keywords": [
+    "AI",
+    "Vibe coding"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Pruthviraj Desai",
+    "url": "https://pruthvirajdesai.qzz.io/"
+  }
+}
+</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="wrap">
+
+    <nav class="sitenav reveal" aria-label="Primary">
+      <a href="/" class="logo">Pruthviraj Desai</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/blog.html" class="active">Blog</a>
+      </div>
+    </nav>
+
+    <main id="main">
+
+    <div class="breadcrumb reveal">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/blog.html">Blog</a>
+      <span class="sep">/</span>
+      <span class="current">Vibe coding as a PM: building this site with AI</span>
+    </div>
+
+    <article>
+      <header class="article-header reveal">
+        <div class="article-meta">
+          <time datetime="2026-07-01">Jul 2026</time>
+          <span class="sep">·</span>
+          <span>2 min read</span>
+          <span class="sep">·</span>
+          <span class="post-tag">AI</span>
+          <span class="post-tag">Vibe coding</span>
+        </div>
+        <h1>Vibe coding as a PM: building this site with AI</h1>
+      </header>
+
+      <div class="article-body reveal">
+        <p>
+        This site was built almost entirely through conversation with an AI coding assistant.
+        I described what I wanted, reviewed what it produced, pushed back when something
+        wasn't right, and repeated. I'm not a software engineer. I've written SQL and Python
+        for analysis, but I'd never built and deployed a website from scratch. A few years ago
+        this would have been a several-week project. It took a handful of evenings.
+        </p>
+        <p>
+        "Vibe coding" is the half-joking name for this way of working. Here's what it was like
+        and what I think it means for people in product roles.
+        </p>
+
+        <h2>What I built</h2>
+        <p>
+        The site is deliberately simple: plain HTML, CSS, and a few lines of JavaScript, no
+        framework and no build step. It runs on my own server behind Caddy, which handles HTTPS
+        automatically. Along the way I added the things a real site needs: an RSS feed, a
+        sitemap, social-share images generated by a small Python script, structured metadata
+        for search engines, accessibility fixes, and caching rules so visitors see updates
+        straight away.
+        </p>
+        <p>
+        I knew most of those things existed. I didn't know how to build any of them. The
+        assistant did, and it explained what it was doing when I asked.
+        </p>
+
+        <h2>What it's good at</h2>
+        <ul>
+        <li><strong>Getting from nothing to something.</strong> The blank page disappears. You can see and react to a working version in minutes.</li>
+        <li><strong>Filling in the boring but essential parts.</strong> Meta tags, feed formats, server config. It knows the conventions so you don't have to look them up.</li>
+        <li><strong>Explaining as it goes.</strong> When I asked why something was done a certain way, I got an answer. I learned more about how the web works this way than I would have from a tutorial.</li>
+        <li><strong>Review.</strong> Asking it to check its own work for bugs and accessibility problems caught real issues.</li>
+        </ul>
+
+        <h2>Where you still need judgement</h2>
+        <p>
+        It's fast, but it isn't a substitute for knowing what you want. The assistant will
+        happily build whatever you describe, including the wrong thing. The quality of the
+        result tracked the clarity of my instructions almost exactly. Vague requests got
+        generic output. Specific requests, with examples and constraints, got what I needed.
+        </p>
+        <p>
+        You also need to check what it produces. It can be confidently wrong, and it can
+        produce placeholder content that looks finished. Everything that goes out under your
+        name needs a human read.
+        </p>
+
+        <h2>What this means for PMs</h2>
+        <p>
+        If the quality of the output depends on the clarity of the spec, then vibe coding is
+        mostly a product management skill. Defining the problem, breaking it into steps,
+        specifying what good looks like, and reviewing the result is exactly what PMs do
+        every day.
+        </p>
+        <p>
+        The difference is the feedback loop. Instead of writing a spec and waiting for a
+        sprint, you can see your idea working in minutes and refine it. For prototyping,
+        internal tools, and testing whether an idea is worth a team's time, that changes what
+        a single PM can do.
+        </p>
+        <p>
+        It doesn't replace engineers for anything that needs to scale, be secure, or be
+        maintained by a team. But it closes much of the gap between having an idea and
+        seeing it work. I plan to explore it further during my MBA, and I expect to write more
+        about it.
+        </p>
+
+        <a href="/blog.html" class="back-link reveal">← Back to Writing</a>
+      </div>
+    </article>
+
+    </main>
+
+    <footer class="reveal">
+      Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
+      No trackers, no third parties, no cookies.
+    </footer>
+
+  </div>
+
+</body>
+</html>

@@ -4,35 +4,53 @@
     <title>Pruthviraj Desai — Writing</title>
     <link>https://pruthvirajdesai.qzz.io/blog.html</link>
     <atom:link href="https://pruthvirajdesai.qzz.io/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Writing by Pruthviraj Desai on AI, product, and self-hosting.</description>
+    <description>Notes, ideas, and things I'm learning, written down by Pruthviraj Desai.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 GMT</lastBuildDate>
     <item>
-      <title>Why I host my own password manager</title>
-      <link>https://pruthvirajdesai.qzz.io/blog/why-i-host-my-own-password-manager.html</link>
-      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/why-i-host-my-own-password-manager.html</guid>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-      <description>Vaultwarden on a $6/mo VPS — the setup, the trade-offs, and why I'll never go back to a managed service for something this sensitive.</description>
-      <category>Self-hosting</category>
-      <category>Security</category>
+      <title>Starting the Cambridge MBA: what I want to get out of it</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/starting-the-cambridge-mba.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/starting-the-cambridge-mba.html</guid>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 GMT</pubDate>
+      <description>MBA notes #1. At the start of the year at Cambridge Judge, a note on what I&#x27;m hoping to learn, what I&#x27;m unsure about, and how I&#x27;ll judge whether it was worth it.</description>
+      <category>MBA</category>
+      <category>Career</category>
     </item>
     <item>
-      <title>What I've learned building AI products at a startup</title>
-      <link>https://pruthvirajdesai.qzz.io/blog/what-ive-learned-building-ai-products.html</link>
-      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/what-ive-learned-building-ai-products.html</guid>
-      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
-      <description>A year and a half at an AI entertainment startup, from product analyst to APM — the parts nobody talks about, and what actually matters when shipping LLM features.</description>
+      <title>Engineer, analyst, PM, MBA: why I went to Cambridge</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/why-i-went-to-cambridge.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/why-i-went-to-cambridge.html</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 GMT</pubDate>
+      <description>A materials-science degree, four years in analytics and product at startups, and now an MBA. How the pieces connect, and what I&#x27;m hoping the next year adds.</description>
+      <category>Career</category>
+      <category>MBA</category>
+    </item>
+    <item>
+      <title>Vibe coding as a PM: building this site with AI</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/vibe-coding-as-a-pm.html</guid>
+      <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
+      <description>I&#x27;m not a software engineer, but I built and run this site with an AI coding assistant. What that was like, what it&#x27;s good at, and what it means for product managers.</description>
       <category>AI</category>
-      <category>Product</category>
+      <category>Vibe coding</category>
     </item>
     <item>
-      <title>Caddy is the quiet revolution in web servers</title>
-      <link>https://pruthvirajdesai.qzz.io/blog/caddy-is-the-quiet-revolution.html</link>
-      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/caddy-is-the-quiet-revolution.html</guid>
-      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
-      <description>I switched from Nginx and never looked back. Automatic HTTPS, a readable config format, and zero manual cert renewal.</description>
-      <category>Infra</category>
-      <category>Self-hosting</category>
+      <title>From Product Analyst to APM: what actually changed</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/from-product-analyst-to-apm.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/from-product-analyst-to-apm.html</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Same company, same product, different job. What changed when I moved from analysing decisions to making them, and what carried over.</description>
+      <category>Product</category>
+      <category>Career</category>
+    </item>
+    <item>
+      <title>Your event tracking is probably bloated</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/your-event-tracking-is-probably-bloated.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/your-event-tracking-is-probably-bloated.html</guid>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Most product analytics setups collect far more events than anyone uses. How to audit your tracking plan, cut the noise, and end up with data people actually trust.</description>
+      <category>Analytics</category>
+      <category>Product</category>
     </item>
   </channel>
 </rss>
