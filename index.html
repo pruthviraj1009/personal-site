@@ -21,8 +21,11 @@
 <meta name="twitter:description" content="MBA candidate at Cambridge Judge Business School with experience in product, growth, and analytics." />
 <meta name="twitter:image" content="https://pruthvirajdesai.qzz.io/og-image.png" />
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Pruthviraj Desai — Writing" href="/feed.xml" />
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 
 <script type="application/ld+json">
 {
@@ -44,23 +47,26 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <main class="wrap">
+  <div class="wrap">
 
-    <nav class="sitenav reveal">
+    <nav class="sitenav reveal" aria-label="Primary">
       <a href="/" class="logo">Pruthviraj Desai</a>
       <div class="nav-links">
-        <a href="/" class="active">Home</a>
+        <a href="/" class="active" aria-current="page">Home</a>
         <a href="/projects.html">Projects</a>
         <a href="/blog.html">Blog</a>
       </div>
     </nav>
 
+    <main id="main">
+
     <!-- hero -->
     <header class="hero">
       <h1 class="reveal delay-1">Pruthviraj<br><span class="last">Desai</span></h1>
-      <p class="tagline reveal delay-2" aria-label="MBA candidate · product, data and AI">
+      <p class="tagline reveal delay-2">
         <span id="tagline-text">MBA candidate · product, data &amp; AI</span><span class="cursor" aria-hidden="true"></span>
       </p>
       <p class="intro reveal delay-3">
@@ -72,7 +78,7 @@
 
     <!-- NOW -->
     <section class="block">
-      <div class="eyebrow reveal">Now</div>
+      <h2 class="eyebrow reveal">Now</h2>
       <ul class="list">
         <li class="reveal delay-1">Pursuing an MBA at Cambridge Judge Business School</li>
         <li class="reveal delay-2">Exploring vibe coding and new ways to turn ideas into working products</li>
@@ -81,16 +87,16 @@
 
     <!-- EXPERIENCE -->
     <section class="block">
-      <div class="eyebrow reveal">Experience</div>
+      <h2 class="eyebrow reveal">Experience</h2>
 
       <article class="company-block reveal delay-1">
         <header class="company-header">
-          <h2 class="company-name">Dashverse</h2>
+          <h3 class="company-name">Dashverse</h3>
           <p class="company-description">An AI entertainment startup engineering the future of storytelling.</p>
         </header>
         <section class="role-entry">
           <div class="role-meta">
-            <h3 class="role-title">Associate Product Manager</h3>
+            <h4 class="role-title">Associate Product Manager</h4>
             <p class="role-period">Dec 2025 — Jun 2026</p>
           </div>
           <ul class="role-highlights">
@@ -100,7 +106,7 @@
         </section>
         <section class="role-entry">
           <div class="role-meta">
-            <h3 class="role-title">Product Analyst</h3>
+            <h4 class="role-title">Product Analyst</h4>
             <p class="role-period">Nov 2024 — Nov 2025</p>
           </div>
           <ul class="role-highlights">
@@ -112,12 +118,12 @@
 
       <article class="company-block reveal delay-2">
         <header class="company-header">
-          <h2 class="company-name">Masai School</h2>
+          <h3 class="company-name">Masai School</h3>
           <p class="company-description">A career school reshaping education through outcome-driven, industry-aligned programmes.</p>
         </header>
         <section class="role-entry">
           <div class="role-meta">
-            <h3 class="role-title">Senior Business Analyst — Growth</h3>
+            <h4 class="role-title">Senior Business Analyst — Growth</h4>
             <p class="role-period">Apr 2024 — Oct 2024</p>
           </div>
           <ul class="role-highlights">
@@ -128,7 +134,7 @@
         </section>
         <section class="role-entry">
           <div class="role-meta">
-            <h3 class="role-title">Business Analyst — Operations</h3>
+            <h4 class="role-title">Business Analyst — Operations</h4>
             <p class="role-period">Aug 2022 — Mar 2024</p>
           </div>
           <ul class="role-highlights">
@@ -140,12 +146,12 @@
 
       <article class="company-block reveal delay-3">
         <header class="company-header">
-          <h2 class="company-name">Uni Cards</h2>
+          <h3 class="company-name">Uni Cards</h3>
           <p class="company-description">A fintech company rethinking conventional credit-card products.</p>
         </header>
         <section class="role-entry">
           <div class="role-meta">
-            <h3 class="role-title">Risk Associate</h3>
+            <h4 class="role-title">Risk Associate</h4>
             <p class="role-period">Jun 2022 — Aug 2022</p>
           </div>
           <ul class="role-highlights">
@@ -157,11 +163,11 @@
 
     <!-- EDUCATION -->
     <section class="block">
-      <div class="eyebrow reveal">Education</div>
+      <h2 class="eyebrow reveal">Education</h2>
       <div class="education-list">
         <article class="education-entry reveal delay-1">
           <div class="education-meta">
-            <h2 class="education-school">Cambridge Judge Business School</h2>
+            <h3 class="education-school">Cambridge Judge Business School</h3>
             <p class="education-period">2026 — 2027</p>
           </div>
           <p class="education-degree">Master of Business Administration (MBA)</p>
@@ -169,7 +175,7 @@
         </article>
         <article class="education-entry reveal delay-2">
           <div class="education-meta">
-            <h2 class="education-school">Indian Institute of Technology Kanpur</h2>
+            <h3 class="education-school">Indian Institute of Technology Kanpur</h3>
             <p class="education-period">2018 — 2022</p>
           </div>
           <p class="education-degree">Bachelor of Technology, Materials Science and Engineering</p>
@@ -180,34 +186,21 @@
 
     <!-- ELSEWHERE -->
     <section class="block">
-      <div class="eyebrow reveal">Elsewhere</div>
+      <h2 class="eyebrow reveal">Elsewhere</h2>
       <div class="links reveal delay-1">
         <a href="mailto:pruthviraj10.idesai@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/pruthvi1009/">LinkedIn</a>
       </div>
     </section>
 
+    </main>
+
     <footer class="reveal">
       Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
       No trackers, no third parties, no cookies.
     </footer>
 
-  </main>
+  </div>
 
-  <script src="/script.js"></script>
-  <script>
-    var TAGLINE = 'MBA candidate · product, data & AI';
-    var textEl  = document.getElementById('tagline-text');
-    var charIdx = 0;
-    function typeStep() {
-      textEl.textContent = TAGLINE.slice(0, charIdx);
-      charIdx++;
-      if (charIdx <= TAGLINE.length) {
-        setTimeout(typeStep, charIdx === 1 ? 800 : 36 + Math.random() * 20);
-      }
-    }
-    typeStep();
-
-  </script>
 </body>
 </html>

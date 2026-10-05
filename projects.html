@@ -21,23 +21,29 @@
 <meta name="twitter:description" content="Projects by Pruthviraj Desai — self-hosted infrastructure, AI tools, and side experiments." />
 <meta name="twitter:image" content="https://pruthvirajdesai.qzz.io/og-image.png" />
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Pruthviraj Desai — Writing" href="/feed.xml" />
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <main class="wrap">
+  <div class="wrap">
 
-    <nav class="sitenav reveal">
+    <nav class="sitenav reveal" aria-label="Primary">
       <a href="/" class="logo">Pruthviraj Desai</a>
       <div class="nav-links">
         <a href="/">Home</a>
-        <a href="/projects.html" class="active">Projects</a>
+        <a href="/projects.html" class="active" aria-current="page">Projects</a>
         <a href="/blog.html">Blog</a>
       </div>
     </nav>
+
+    <main id="main">
 
     <div class="breadcrumb reveal">
       <a href="/">Home</a>
@@ -51,7 +57,7 @@
     </div>
 
     <div class="project-card reveal delay-1">
-      <div class="project-name">Personal Homelab</div>
+      <h2 class="project-name">Personal Homelab</h2>
       <div class="project-desc">
         A self-managed cloud server running Vaultwarden for password management, Caddy as a
         reverse proxy with automatic HTTPS, and n8n for workflow automation. Everything I
@@ -67,7 +73,7 @@
     </div>
 
     <div class="project-card reveal delay-2">
-      <div class="project-name">This Site</div>
+      <h2 class="project-name">This Site</h2>
       <div class="project-desc">
         A hand-written static site with no frameworks, no build tools, and no external
         dependencies. Pure HTML, CSS, and a few lines of vanilla JS. Served by Caddy with
@@ -81,13 +87,14 @@
       </div>
     </div>
 
+    </main>
+
     <footer class="reveal">
       Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
       No trackers, no third parties, no cookies.
     </footer>
 
-  </main>
+  </div>
 
-  <script src="/script.js"></script>
 </body>
 </html>

@@ -21,23 +21,29 @@
 <meta name="twitter:description" content="Writing by Pruthviraj Desai on AI, product, and self-hosting." />
 <meta name="twitter:image" content="https://pruthvirajdesai.qzz.io/og-image.png" />
 
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Pruthviraj Desai — Writing" href="/feed.xml" />
+<link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
-  <main class="wrap">
+  <div class="wrap">
 
-    <nav class="sitenav reveal">
+    <nav class="sitenav reveal" aria-label="Primary">
       <a href="/" class="logo">Pruthviraj Desai</a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/projects.html">Projects</a>
-        <a href="/blog.html" class="active">Blog</a>
+        <a href="/blog.html" class="active" aria-current="page">Blog</a>
       </div>
     </nav>
+
+    <main id="main">
 
     <div class="breadcrumb reveal">
       <a href="/">Home</a>
@@ -47,13 +53,13 @@
 
     <div class="page-hero">
       <h1 class="reveal delay-1">Writing</h1>
-      <p class="sub reveal delay-2">Thoughts on AI, product, and running your own corner of the internet.</p>
+      <p class="sub reveal delay-2">Thoughts on AI, product, and running your own corner of the internet. <a href="/feed.xml" class="feed-link">RSS</a></p>
     </div>
 
     <div class="post-list">
       <a href="/blog/why-i-host-my-own-password-manager.html" class="post-item reveal delay-1">
-        <div class="post-date">Jun 2026 · 4 min read</div>
-        <div class="post-title">Why I host my own password manager</div>
+        <div class="post-date"><time datetime="2026-06-01">Jun 2026</time> · 4 min read</div>
+        <h2 class="post-title">Why I host my own password manager</h2>
         <div class="post-excerpt">Vaultwarden on a $6/mo VPS — the setup, the trade-offs, and why I'll never go back to a managed service for something this sensitive.</div>
         <div class="post-tags">
           <span class="post-tag">Self-hosting</span>
@@ -61,8 +67,8 @@
         </div>
       </a>
       <a href="/blog/what-ive-learned-building-ai-products.html" class="post-item reveal delay-2">
-        <div class="post-date">May 2026 · 4 min read</div>
-        <div class="post-title">What I've learned building AI products at a startup</div>
+        <div class="post-date"><time datetime="2026-05-01">May 2026</time> · 4 min read</div>
+        <h2 class="post-title">What I've learned building AI products at a startup</h2>
         <div class="post-excerpt">Twelve months in as an APM at an AI-native company — the parts nobody talks about, and what actually matters when shipping LLM features.</div>
         <div class="post-tags">
           <span class="post-tag">AI</span>
@@ -70,8 +76,8 @@
         </div>
       </a>
       <a href="/blog/caddy-is-the-quiet-revolution.html" class="post-item reveal delay-3">
-        <div class="post-date">Apr 2026 · 3 min read</div>
-        <div class="post-title">Caddy is the quiet revolution in web servers</div>
+        <div class="post-date"><time datetime="2026-04-01">Apr 2026</time> · 3 min read</div>
+        <h2 class="post-title">Caddy is the quiet revolution in web servers</h2>
         <div class="post-excerpt">I switched from Nginx and never looked back. Automatic HTTPS, a readable config format, and zero manual cert renewal. Here's why I think Caddy is underrated.</div>
         <div class="post-tags">
           <span class="post-tag">Infra</span>
@@ -80,13 +86,14 @@
       </a>
     </div>
 
+    </main>
+
     <footer class="reveal">
       Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
       No trackers, no third parties, no cookies.
     </footer>
 
-  </main>
+  </div>
 
-  <script src="/script.js"></script>
 </body>
 </html>

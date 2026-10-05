@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pruthviraj Desai — Writing</title>
+    <link>https://pruthvirajdesai.qzz.io/blog.html</link>
+    <atom:link href="https://pruthvirajdesai.qzz.io/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Writing by Pruthviraj Desai on AI, product, and self-hosting.</description>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
+    <item>
+      <title>Why I host my own password manager</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/why-i-host-my-own-password-manager.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/why-i-host-my-own-password-manager.html</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+      <description>Vaultwarden on a $6/mo VPS — the setup, the trade-offs, and why I'll never go back to a managed service for something this sensitive.</description>
+      <category>Self-hosting</category>
+      <category>Security</category>
+    </item>
+    <item>
+      <title>What I've learned building AI products at a startup</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/what-ive-learned-building-ai-products.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/what-ive-learned-building-ai-products.html</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate>
+      <description>Twelve months in as an APM at an AI-native company — the parts nobody talks about, and what actually matters when shipping LLM features.</description>
+      <category>AI</category>
+      <category>Product</category>
+    </item>
+    <item>
+      <title>Caddy is the quiet revolution in web servers</title>
+      <link>https://pruthvirajdesai.qzz.io/blog/caddy-is-the-quiet-revolution.html</link>
+      <guid isPermaLink="true">https://pruthvirajdesai.qzz.io/blog/caddy-is-the-quiet-revolution.html</guid>
+      <pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate>
+      <description>I switched from Nginx and never looked back. Automatic HTTPS, a readable config format, and zero manual cert renewal.</description>
+      <category>Infra</category>
+      <category>Self-hosting</category>
+    </item>
+  </channel>
+</rss>

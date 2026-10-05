@@ -1,0 +1,42 @@
+# Reference Caddy config for pruthvirajdesai.qzz.io.
+# Merge into the server's Caddyfile (site is a git clone at /var/www/site),
+# then: caddy validate --config /etc/caddy/Caddyfile && sudo systemctl reload caddy
+
+pruthvirajdesai.qzz.io {
+	root * /var/www/site
+	encode zstd gzip
+
+	# Repo and tooling files are not part of the site: .git/, .gitignore, scripts/, this folder, notes.
+	@private {
+		path /.* /scripts/* /deploy/* /notes/*
+		not path /.well-known/*
+	}
+	error @private 404
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests"
+		-Server
+	}
+
+	# Filenames aren't fingerprinted, so keep CSS/JS caching short; HTML always revalidates.
+	@assets path *.css *.js
+	header @assets Cache-Control "public, max-age=3600"
+	@images path *.png *.svg *.ico
+	header @images Cache-Control "public, max-age=604800"
+	@pages path / *.html *.xml
+	header @pages Cache-Control "no-cache"
+
+	file_server
+
+	handle_errors {
+		@404 expression {err.status_code} == 404
+		handle @404 {
+			rewrite * /404.html
+			file_server
+		}
+	}
+}

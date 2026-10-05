@@ -17,13 +17,17 @@
 <meta name="twitter:description" content="Page not found." />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="alternate" type="application/rss+xml" title="Pruthviraj Desai — Writing" href="/feed.xml" />
 <link rel="stylesheet" href="/style.css" />
+<script src="/script.js"></script>
 </head>
 <body>
 
-  <main class="wrap">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="wrap">
 
-    <nav class="sitenav reveal">
+    <nav class="sitenav reveal" aria-label="Primary">
       <a href="/" class="logo">Pruthviraj Desai</a>
       <div class="nav-links">
         <a href="/">Home</a>
@@ -32,8 +36,10 @@
       </div>
     </nav>
 
+    <main id="main">
+
     <div class="error-page reveal">
-      <div class="error-code">404</div>
+      <h1 class="error-code" aria-label="404: page not found">404</h1>
       <div class="error-terminal">
         <div class="terminal-line">
           <span class="terminal-prompt">$</span>
@@ -46,62 +52,22 @@
         </div>
       </div>
       <p class="error-msg">This page doesn't exist — it may have moved or never existed.</p>
-      <div class="links" style="margin-top: 28px;">
+      <div class="links">
         <a href="/">Home</a>
         <a href="/projects.html">Projects</a>
         <a href="/blog.html">Blog</a>
       </div>
     </div>
 
+    </main>
+
     <footer class="reveal">
       Served from my own server with <span class="accent">Caddy</span> and automatic HTTPS.<br>
       No trackers, no third parties, no cookies.
     </footer>
 
-  </main>
+  </div>
 
-  <style>
-    .error-page { margin-top: 60px; }
-    .error-code {
-      font-family: var(--display);
-      font-size: clamp(80px, 20vw, 140px);
-      font-weight: 600;
-      line-height: 1;
-      letter-spacing: -.03em;
-      color: var(--surface-2);
-      margin-bottom: 32px;
-      user-select: none;
-    }
-    .error-terminal {
-      font-family: var(--mono);
-      font-size: 13.5px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin-bottom: 24px;
-      display: inline-block;
-      min-width: 340px;
-    }
-    .terminal-line { display: flex; align-items: center; gap: 10px; line-height: 2; }
-    .terminal-prompt { color: var(--signal); }
-    .terminal-cmd { color: var(--ink-soft); }
-    .terminal-cmd span { color: var(--ink-faint); }
-    .error-output { color: #f87171; padding-left: 22px; }
-    .terminal-cursor {
-      display: inline-block;
-      width: 8px; height: 1.1em;
-      background: var(--signal);
-      border-radius: 1px;
-      animation: blink 1.1s step-end infinite;
-      vertical-align: middle;
-    }
-    .error-msg { color: var(--ink-soft); font-size: 16px; margin: 0; }
-  </style>
 
-  <script src="/script.js"></script>
-  <script>
-    document.getElementById('error-path').textContent = window.location.pathname;
-  </script>
 </body>
 </html>
