@@ -22,13 +22,12 @@ pruthvirajdesai.qzz.io {
 		-Server
 	}
 
-	# Filenames aren't fingerprinted, so keep CSS/JS caching short; HTML always revalidates.
-	@assets path *.css *.js
-	header @assets Cache-Control "public, max-age=3600"
+	# Filenames aren't fingerprinted, so HTML/CSS/JS always revalidate (cheap 304s via ETag);
+	# a stale script.js paired with new HTML leaves .reveal content invisible.
+	@revalidate path / *.html *.xml *.css *.js
+	header @revalidate Cache-Control "no-cache"
 	@images path *.png *.svg *.ico
 	header @images Cache-Control "public, max-age=604800"
-	@pages path / *.html *.xml
-	header @pages Cache-Control "no-cache"
 
 	file_server
 
